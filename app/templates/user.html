@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <h1>User: {{ user.username }}</h1>
+    <table>
+        <tr>
+            <td><img src="{{ user.avatar(128) }}"></td>
+            <td><h1>User: {{ user.username }}</h1></td>
+        </tr>
+    </table>
+    <hr>
     <hr>
     {% for post in posts %}
     <p>

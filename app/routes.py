@@ -9,7 +9,6 @@ from app.models import User
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'Miguel'}
     posts = [
         { 
             'author': {'username': 'John'},
@@ -20,8 +19,6 @@ def index():
             'body': 'The Kantara movie was cool'
         }
     ]
-
-
     return render_template('index.html', title='Home', posts=posts)
 
 
