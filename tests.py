@@ -1,5 +1,5 @@
 import os
-os.environ['DATABASE_URI'] = 'sqlite://'
+os.environ['DATABASE_URL'] = 'sqlite://'
 
 from datetime import datetime, timedelta
 import unittest
