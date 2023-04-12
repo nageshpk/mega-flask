@@ -1,11 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    {% if title %}
-    <title>{{ title }} - Microblog</title>
-    {% else %}
-    <title>Welcome to Microblog!</title>
-    {% endif %}
+    {% if title %} {{ title }} - Microblog {% else %} Welcome to Microblog! {% endif %}
 {% endblock %}
 
 {% block navbar %}
