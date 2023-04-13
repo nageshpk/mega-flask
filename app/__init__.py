@@ -22,7 +22,7 @@ login.login_message = _l('Please login to access this page.')
 mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
-babel = Babel(app)
+
 
 
 if not app.debug:
@@ -52,9 +52,8 @@ if not app.debug:
     app.logger.info('Microblog startup')
 
 
-@babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
-
+babel = Babel(app, locale_selector=get_locale)
 from app import routes, models, errors
