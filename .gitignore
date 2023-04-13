@@ -39,3 +39,4 @@ env
 app.db
 microblog.log*
 __pycache__
+.pot
