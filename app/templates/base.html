@@ -59,7 +59,7 @@
             $(destElem).html('<img src="{{ url_for("static", filename="loading.gif") }}">');
             $.post('/translate', {
                 text: $(sourceELem).text(),
-                source_language: soucrLang,
+                source_language: sourceLang,
                 dest_langauge: destLang
             }).done(function(response) {
                 $(destElem).text(response['text'])
